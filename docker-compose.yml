@@ -8,9 +8,7 @@ services:
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
     node-app:
         build: .
-        volumes: 
-            - ./:/app
-            - /app/node_modules
+        image: cheekl2000/node-app
         environment: 
             - PORT=3000
         depends_on: 
